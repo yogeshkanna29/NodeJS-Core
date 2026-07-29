@@ -52,3 +52,7 @@
 
 - <strong>REPL</strong> - is an interactive shell that allows you to execute JavaScript code line-by-line and see immediate results (Read-Eval-Print Loop).
 
+- <strong>ANSI</strong> - American National Standards Institute.
+
+
+
