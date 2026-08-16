@@ -237,11 +237,29 @@ An AssertionError in Node.js is an error that is thrown when the assert module d
 
 <details>
     <summary><strong>Async Programming</strong></summary>
+
+- Async Programming
+
+<details>
+    <summary><strong>Event Emitter</strong></summary>
     
+- In Node.js, an event can be described simply as a string with a corresponding callback. An event can be "emitted" (or, in other words, the corresponding callback be called) multiple times or you can choose to only listen for the first time it is emitted.
+</details>
+
+---
+
+<details>
+    <summary><strong>Event Loop</strong></summary>
+    
+- The Event Loop is one of the most critical aspects of Node.js. Why is this so important? Because it explains how Node.js can be asynchronous and have non-blocking I/O, it explains the "killer feature" of Node.js, which made it this successful.
+</details>
+
+---
+
 - Writing Async Code
 <details>
     <summary><strong>Promises</strong></summary>
-    
+
 - A promise is an object representing the eventual result of an async operation. It can be in one of three states: pending, fulfilled, or rejected. Promises provide .then() and .catch() methods for chaining operations, and they are the foundation for async/await.
 </details>
 
@@ -487,4 +505,395 @@ An AssertionError in Node.js is an error that is thrown when the assert module d
 </details>
 </details>
 
+</details>
+
+---
+
+<details>
+    <summary><strong>Building & Consuming APIs</strong></summary>
+    
+- Node.js is commonly used to build HTTP APIs that other clients consume, as well as to consume external APIs from within your application. Building an API involves defining routes, handling requests, and returning responses. Consuming an API involves making HTTP requests and processing the returned data.
+
+<details>
+    <summary><strong>Frameworks</strong></summary>
+    
+<details>
+    <summary><strong>Express.js</strong></summary>
+    
+- Express.js is the most widely used Node.js web framework. It provides a minimal set of features for routing HTTP requests and adding middleware. Its simplicity and large ecosystem of plugins make it a popular choice for building APIs and web applications of all sizes.
+</details>
+
+---
+
+<details>
+    <summary><strong>fastify</strong></summary>
+    
+- Fastify is a high-performance web framework for Node.js. It is designed to have low overhead and high throughput, making it one of the fastest Node.js HTTP frameworks available. It includes a built-in schema-based validation and serialization system and has a plugin architecture for extending functionality.
+</details>
+
+---
+
+<details>
+    <summary><strong>NestJS</strong></summary>
+    
+- NestJS is a framework for building server-side Node.js applications. It uses TypeScript by default and draws heavily from Angular's architecture, using decorators, modules, and dependency injection. It is designed for building scalable, maintainable applications and is well-suited for complex, enterprise-grade APIs.
+</details>
+
+---
+
+<details>
+    <summary><strong>Hono</strong></summary>
+    
+- Hono is a lightweight, simple, and fast web framework for Cloudflare Workers, Deno, Bun, and other applications. It is a modern web application that is both fast and flexible. It offers inbuilt support for TypeScript, and easy development in a local environment. Using Hono, It is easy to create publishable web applications with Deno, Bun, and Cloudflare Workers.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Making API Call</strong></summary>
+    
+<details>
+    <summary><strong>http module</strong></summary>
+    
+- The http module is Node.js's built-in module for creating HTTP servers and making HTTP requests. It provides low-level access to the HTTP protocol, giving you full control over request and response handling. Most developers use a framework like Express or a library like Axios on top of it.
+</details>
+
+---
+
+<details>
+    <summary><strong>Axios</strong></summary>
+    
+- Axios is a promise-based HTTP Client for node.js and the browser. Used for making requests to web servers. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.
+</details>
+
+---
+
+<details>
+    <summary><strong>Ky</strong></summary>
+    
+- Ky is a tiny and elegant HTTP client based on the browser Fetch API. Ky targets modern browsers and Deno.For older browsers, you will need to transpile and use a fetch polyfill.For Node.js, check out Got.. 1 KB (minified & gzipped), one file, and no dependencies.
+</details>
+
+---
+
+<details>
+    <summary><strong>fetch</strong></summary>
+    
+- The fetch() method in JavaScript is used to request to the server and load the information on the webpages. The request can be of any APIs that return the data of the format JSON or XML. This method returns a promise.
+</details>
+
+---
+
+<details>
+    <summary><strong>Got Package</strong></summary>
+    
+- Got is a lighter, human-friendly, and powerful HTTP request library explicitly designed to work with Node.js. It supports pagination, RFC compliant caching, makes an API request again if it fails, supports cookies out of the box, etc.
+</details>
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Monitor Changes (Dev)</strong></summary>
+    
+- Keep App Running
+
+- In Node.js, you need to restart the process to make changes take effect. This adds an extra step to your workflow. You can eliminate this extra step by using nodemon to restart the process automatically. Since Node.js 18.11.0, you can run Node with the --watch flag to reload your app every time a file is changed. So you don't need to use nodemon anymore.
+
+<details>
+    <summary><strong>--watch</strong></summary>
+    
+- node --watch your_script.js
+- Whenever a change is detected, Node.js automatically restarts the script
+</details>
+
+---
+
+<details>
+    <summary><strong>Nodemon</strong></summary>
+    
+- In Node.js, you need to restart the process to make changes take effect. This adds an extra step to your workflow. You can eliminate this extra step by using nodemon or PM2 to restart the process automatically. nodemon is a command-line interface (CLI) utility developed by rem that wraps your Node app, watches the file system, and automatically restarts the process.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Template Engines</strong></summary>
+    
+- Template engines allow you to generate HTML dynamically by combining HTML structure with data. In Node.js, they are used in **server-side rendered applications** to produce HTML pages on the server before sending them to the client. Common template engines include EJS, Pug, and Marko.
+
+<details>
+    <summary><strong>EJS</strong></summary>
+    
+- EJS is a template language or engine that allows you to generate HTML markup with pure JavaScript. And this is what makes it perfect for Nodejs applications. In simple words, the EJS template engine helps to embed JavaScript into your HTML template easily.
+</details>
+
+---
+
+<details>
+    <summary><strong>Pug</strong></summary>
+
+- Pug is a JavaScript template engine. It is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. Pug was formerly called Jade. Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers
+</details>
+
+---
+
+<details>
+    <summary><strong>Marko</strong></summary>
+    
+- Marko is a fast and lightweight HTML-based templating engine that compiles templates to CommonJS modules and supports streaming, async rendering, and custom tags. It is HTML re-imagined as a language for building dynamic and reactive user interfaces.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Working with Databases</strong></summary>
+    
+<details>
+    <summary><strong>NoSQL</strong></summary>
+    
+<details>
+    <summary><strong>Mongoose</strong></summary>
+    
+- Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+</details>
+
+---
+
+<details>
+    <summary><strong>Prisma</strong></summary>
+    
+- Prisma provides an open source next-generation ORM in the TypeScript ecosystem. It offers a dedicated API for relation filters. It provides an abstraction layer that makes you more productive compared to writing SQL. Prisma currently supports PostgreSQL, MySQL, SQL Server, SQLite, MongoDB and CockroachDB.
+</details>
+
+---
+
+<details>
+    <summary><strong>Native Drivers (NoSQL)</strong></summary>
+    
+- Native database drivers are npm packages provided by database vendors that let Node.js communicate directly with a NoSQL database. For example, the official MongoDB driver connects to MongoDB and lets you run queries against it. Using a native driver gives you full control but requires writing raw query logic yourself.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Relational</strong></summary>
+    
+<details>
+    <summary><strong>Drizzle</strong></summary>
+    
+- Drizzle lets you build your project the way you want, without interfering with your project or structure. Using Drizzle you can define and manage database schemas in TypeScript, access your data in a SQL-like or relational way, and take advantage of opt-in tools to make your developer experience amazing.
+</details>
+
+---
+<details>
+    <summary><strong>TypeORM</strong></summary>
+    
+- TypeORM is an ORM that can run in NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron platforms and can be used with TypeScript and JavaScript (ES5, ES6, ES7, ES8). Its goal is to always support the latest JavaScript features and provide additional features that help you to develop any kind of application that uses databases - from small applications with a few tables to large scale enterprise applications with multiple databases.
+</details>
+
+---
+
+<details>
+    <summary><strong>Knex</strong></summary>
+    
+- Knex.js is a "batteries included" SQL query builder for PostgreSQL, CockroachDB, MSSQL, MySQL, MariaDB, SQLite3, Better-SQLite3, Oracle, and Amazon Redshift designed to be flexible, portable, and fun to use.
+</details>
+
+---
+
+<details>
+    <summary><strong>Sequelize</strong></summary>
+    
+- Sequelize is a mature ORM for Node.js that supports PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL. It provides model definitions, associations, query building, and migration support. It uses a promise-based API and has been in the ecosystem for many years.
+</details>
+
+---
+
+<details>
+    <summary><strong>Prisma</strong></summary>
+    
+- Prisma is an ORM that helps app developers build faster and make fewer errors. Combined with its Data Platform developers gain reliability and visibility when working with databases.
+</details>
+
+---
+
+<details>
+    <summary><strong>Native Drivers (Relational)</strong></summary>
+    
+- Native drivers for relational databases let Node.js connect to databases like PostgreSQL or MySQL directly. Examples include the pg package for PostgreSQL and mysql2 for MySQL. They give you direct access to the database and let you run raw SQL queries.
+</details>
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Testing</strong></summary>
+    
+- Software testing is the process of verifying that what we create is doing exactly what we expect it to do. The tests are created to prevent bugs and improve code quality. The two most common testing approaches are unit testing and end-to-end testing. In the first, we examine small snippets of code, in the second, we test an entire user flow.
+
+<details>
+    <summary><strong>Vitest</strong></summary>
+    
+- Vitest is a Vite-native unit testing framework that's Jest-compatible. Vitest is a powerful testing library built on top of Vite that is growing in popularity. You can use Vitest for a range of testing needs, such as unit, integration, end-to-end (E2E), snapshot, and performance testing of functions and components. ESM, TypeScript, JSX. Out-of-box ESM, TypeScript and JSX support powered by esbuild. Vitest is free and open source.
+</details>
+
+---
+
+<details>
+    <summary><strong>Jest</strong></summary>
+    
+- Jest is a delightful JavaScript Testing Framework with a focus on simplicity. It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!
+</details>
+
+---
+
+<details>
+    <summary><strong>node:test</strong></summary>
+    
+- node:test is Node.js's built-in test runner, added in version 18. It provides a simple API for writing and running tests without any additional dependencies. For projects that want minimal tooling, it is a practical alternative to third-party frameworks.
+</details>
+
+---
+
+<details>
+    <summary><strong>Cypress</strong></summary>
+    
+- Cypress is an end-to-end testing framework designed for web applications. It runs tests directly in the browser and provides a visual test runner for debugging. It is primarily used for testing user interactions in the browser rather than pure Node.js code.
+</details>
+
+---
+
+<details>
+    <summary><strong>Playwright</strong></summary>
+    
+- Playwright is a browser automation and end-to-end testing tool developed by Microsoft. It supports multiple browsers (Chromium, Firefox, WebKit) and allows you to write tests that simulate real user behavior. It can also be used for scraping and automating web-based workflows.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Keep your app running in Production</strong></summary>
+    
+- PM2 lets you run your nodejs scripts forever. In the event that your application crashes, PM2 will also restart it for you..
+
+<details>
+    <summary><strong>Pm2</strong></summary>
+    
+- PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Node.js Logging</strong></summary>
+    
+- Logging is an essential part of understanding the complete application life cycle of the Node.js application. We can much more easily and quickly fix errors by looking at logs throughout the development process, from creating to debugging to designing new features. Error, warn, info, and debug are the four basic logging levels in Node.js. Logging involves persistently collecting information about an application's runtime behaviour.
+
+<details>
+    <summary><strong>Winston</strong></summary>
+    
+- winston is designed to be a simple and universal logging library with support for multiple transports. A transport is essentially a storage device for your logs. Each winston logger can have multiple transports configured at different levels. For example, one may want error logs to be stored in a persistent remote location (like a database), but all logs output to the console or a local file.
+</details>
+
+---
+
+<details>
+    <summary><strong>Morgan</strong></summary>
+    
+- Morgan is a NodeJS and express.js middleware to log the HTTP request and error, simplifying the debugging process. It provides flexibility in defining the format of log messages and helps override the output destination for your logs.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Nodejs Threads</strong></summary>
+    
+- Node.js is a single-threaded language and gives us ways to work parallelly to our main process. Taking note of nowadays multicore system single threading is very memory efficient.
+
+<details>
+    <summary><strong>Child Process</strong></summary>
+    
+- The child_process module gives the node the ability to run the child process, established through IPC (inter-process communication) by accessing operating system commands. The three main methods inside this module are : child_process.spawn() child_process.fork() child_process.exec()
+</details>
+
+---
+
+<details>
+    <summary><strong>Cluster</strong></summary>
+    
+- The Cluster module allows you to easily create child processes that each runs simultaneously on their own single thread, to handle workloads among their application threads.
+</details>
+
+---
+
+<details>
+    <summary><strong>Worker Threads</strong></summary>
+    
+- Worker thread is a continuous parallel thread that runs and accepts messages until it is explicitly closed or terminated. With worker threads, we can achieve a much efficient application without creating a deadlock situation. Workers, unlike children's processes, can exchange memory.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Streams</strong></summary>
+    
+- Streams in Node.js are objects that let you read or write data in chunks, rather than loading everything into memory at once. They are useful for handling large files, HTTP requests, or any data that comes in over time. There are four types: readable, writable, duplex (both), and transform (modifies data as it passes through).
+</details>
+
+---
+
+<details>
+    <summary><strong>Garbage Collection</strong></summary>
+    
+- Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions… All that takes memory. The main concept of memory management in JavaScript is reachability.
+</details>
+
+---
+
+<details>
+    <summary><strong>Debugging</strong></summary>
+    
+- Debugging is the process of identifying and fixing issues in a Node.js application. Node.js provides built-in debugging capabilities via the --inspect flag, which connects to Chrome DevTools. Effective debugging involves using breakpoints, inspecting variables at runtime, and understanding the call stack.
+
+<details>
+    <summary><strong>Memory Leaks</strong></summary>
+    
+- Memory leaks are caused when your Node.js app’s CPU and memory usage increases over time for no apparent reason. In simple terms, a Node.js memory leak is an orphan block of memory on the Heap that is no longer used by your app because it has not been released by the garbage collector. It’s a useless block of memory. These blocks can grow over time and lead to your app crashing because it runs out of memory.
+</details>
+
+<details>
+    <summary><strong>Using APM</strong></summary>
+    
+- APM (Application Performance Monitoring) tools provide real-time visibility into the performance of a Node.js application in production. They track metrics like response times, error rates, memory usage, and database query performance. Popular APM tools for Node.js include Datadog, New Relic, and Elastic APM.
+</details>
+</details>
+
+---
+
+<details>
+    <summary><strong>Nodejs core modules</strong></summary>
+    
+- These are the core modules that come with Node.js out of the box. This module provides tools or APIs for performing out certain standard Node.js operations. like interacting with the file system, url parsing, or logging information to the console.
+
+- fs module
+- url module
+- console module
+- util module
+- events module
+- os module
+- worker threads module
+- child process module
+- process object
+- crypto module
 </details>
